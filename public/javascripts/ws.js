@@ -7,7 +7,7 @@ function entry() {
     return;
   }
 
-  socket = new WebSocket('ws://192.168.13.238:4080', encodeURI(username));
+  socket = new WebSocket('ws://localhost:4080', encodeURI(username));
   socket.onopen = function () {
     // 发送一个初始化消息
     socket.send('进入了聊天室。');
