@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p(id='login')
+    span 输入你的名字：
+    input(type='text', id='user_name')
+    input(type='button', value='进入', onclick='entry()')
+  p(id='messages', style='display: none;')
+    textarea(id='message_area', rows='20', style='width:100%;')
+    input(type='text', id='message_content')
+    input(type='button', value='发送', onclick='send()')
